@@ -1,0 +1,28 @@
+{
+  "name": "angular-highlight-textarea",
+  "version": "0.0.1",
+  "author": "Florent Boisselier <fboisselier52@gmail.com>",
+  "description": "A directive to highlight words and sentences into <textarea> and <input>",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "jshint-stylish": "^0.2.0",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trusta/angular-highlight-textarea.git"
+  },
+  "keywords": [
+    "angular",
+    "highlight",
+    "directive",
+    "textarea"
+  ]
+}
