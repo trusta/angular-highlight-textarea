@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 
         // Copies remaining files to places other tasks can use
         copy: {
-            toto: {
+            dist: {
                 src: ['src/angular-highlight-textarea.js'],
                 dest: 'dist/angular-highlight-textarea.js'
             }
@@ -59,6 +59,16 @@ module.exports = function(grunt) {
                     'dist/angular-highlight-textarea.min.js': ['dist/angular-highlight-textarea.js']
                 }
             }
+        },
+        ngAnnotate: {
+            options: {
+                singleQuotes: true,
+            },
+            dist: {
+                files: {
+                    'dist/angular-highlight-textarea.min.js': ['dist/angular-highlight-textarea.js'],
+                },
+            }
         }
     });
 
@@ -66,7 +76,8 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'jshint:all',
         'clean:dist',
-        'copy:toto',
+        'copy:dist',
+        'ngAnnotate:dist',
         'uglify:dist'
     ]);
 

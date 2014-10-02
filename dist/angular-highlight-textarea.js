@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularHighlightTextarea')
+angular.module('angularHighlightTextarea', [])
     .directive('fbHighlight', function() {
         return {
             restrict: 'A',
@@ -8,7 +8,7 @@ angular.module('angularHighlightTextarea')
                 option: '=fbOption'
             },
             link: function postLink(scope, element) {
-                element.highlightTextarea(scope.option);
+                $(element).highlightTextarea(scope.option);
             }
         };
     });

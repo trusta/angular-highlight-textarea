@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../bower_components/jquery-ui/themes/start/jquery-ui.min.css">
+    <link rel="stylesheet" href="../bower_components/jquery-highlighttextarea/jquery.highlighttextarea.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    Ecrire "test"
+    <textarea fb-highlight fb-option="option"></textarea>
+</body>
+
+
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="../bower_components/jquery-highlighttextarea/jquery.highlighttextarea.min.js"></script>
+<script src="../dist/angular-highlight-textarea.min.js"></script>
+
+<script type="text/javascript">
+var app = angular.module('myApp', ['angularHighlightTextarea']);
+app.controller('myCtrl', function($scope) {
+    $scope.option = {
+        words: ['test'],
+        color: '#5bc0de'
+    };
+});
+</script>
+
+</html>
