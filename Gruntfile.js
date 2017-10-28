@@ -24,12 +24,7 @@ module.exports = function(grunt) {
                 jshintrc: '.jshintrc',
                 reporter: require('jshint-stylish')
             },
-            all: {
-                src: [
-                    'Gruntfile.js',
-                    'src/{,*/}*.js'
-                ]
-            }
+            all: ['Gruntfile.js', 'src/{,*/}*.js']
         },
 
         // Empties folders to start fresh
